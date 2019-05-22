@@ -1,0 +1,15 @@
+<ngbd-modal-component></ngbd-modal-component>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let usuario of usuarios">
+    <tr>
+      <td>{{usuario.nome}}</td>
+      <td>{{usuario.idade}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,18 @@
+<div class="modal-header">
+  <h4 class="modal-title">Cadastro Usuário</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form #form="ngForm">
+  <div class="modal-body">
+    <label>Informe o seu Nome</label>
+    <input class="form-control" type="text" [(ngModel)]="usuario.nome" name="nome" #nome="ngModel" required/>
+    <label>Informe sua Idade</label>
+    <input class="form-control" type="number" [(ngModel)]="usuario.idade" name="idade" #idade="ngModel" required/>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-success" (click)="Cadastro()" [disabled]="!form.form.valid">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+  </div>
+</form>
