@@ -10,6 +10,8 @@
     <tr>
       <td>{{usuario.nome}}</td>
       <td>{{usuario.idade}}</td>
+      <td><button class="btn btn-danger" (click)="DeletaUsuarios(usuario.id)">Deletar</button></td>
+      <td><button class="btn btn-warning" (click)="GetUserById(usuario.id)">Alterar</button></td>
     </tr>
   </tbody>
 </table>

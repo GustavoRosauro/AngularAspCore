@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from './Modal/Usuario';
@@ -32,12 +32,17 @@ export class NgbdModalContent implements OnInit {
 })
 export class NgbdModalComponent {
   constructor(private modalService: NgbModal) { }
-
+  @Input('usuario') usuario: any;
   open() {
     const modalRef = this.modalService.open(NgbdModalContent);
     modalRef.componentInstance.name = 'World';
   }
   close(): void {
     this.modalService.dismissAll;
+  }
+openUSer(usuario: Usuario):void{
+  const modalRef = this.modalService.open(NgbdModalContent);
+  this.usuario = usuario;
+  modalRef.componentInstance.usuario = usuario;
   }
 }

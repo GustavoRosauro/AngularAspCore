@@ -26,7 +26,8 @@ import { FormsModule } from '@angular/forms';
     NgbdModalContent
   ],
   providers: [
-    Usuario
+    Usuario,
+    NgbdModalComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -7,7 +7,7 @@
 <form #form="ngForm">
   <div class="modal-body">
     <label>Informe o seu Nome</label>
-    <input class="form-control" type="text" [(ngModel)]="usuario.nome" name="nome" #nome="ngModel" required/>
+    <input class="form-control" value="{{usuario.nome}}" type="text" [(ngModel)]="usuario.nome" name="nome" #nome="ngModel" required/>
     <label>Informe sua Idade</label>
     <input class="form-control" type="number" [(ngModel)]="usuario.idade" name="idade" #idade="ngModel" required/>
   </div>
