@@ -70,5 +70,18 @@ namespace CoreAngular.Model
                 return user;
             }
         }
+        public void Alterar(Usuario usuario)
+        {
+            string query = string.Format(@"UPDATE USUARIOS
+                                           SET NOME = '{0}', 
+                                           IDADE = {1}
+                                           WHERE ID = {2}",usuario.Nome,usuario.Idade,usuario.Id);
+            using (var conn = new SqlConnection(connection))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query,conn);
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

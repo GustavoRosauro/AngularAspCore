@@ -8,6 +8,7 @@ import { NgbdModalComponent } from './Modal-Component'
 import { NgbdModalContent } from './Modal-Component';
 import { Usuario } from './Modal/Usuario';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   entryComponents: [
     NgbdModalComponent,

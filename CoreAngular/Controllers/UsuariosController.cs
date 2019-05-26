@@ -32,5 +32,10 @@ namespace CoreAngular.Controllers
         {
             return usuario.GetUserById(id);
         }
+        [HttpPut("[action]")]
+        public void Atualizar([FromBody] Usuario user)
+        {
+            usuario.Alterar(user);
+        }
     }
 }
